@@ -1,4 +1,7 @@
 title, type, value, category
-Loan, income, 1500, Others
-Website Hosting, outcome, 50, Others
-Ice cream, outcome, 3, Food
+Aluguel, outcome, 230, Moradia
+Energia, outcome, 75, Moradia
+Internet, outcome, 20, Moradia
+Mercado, outcome, 110, Moradia
+Salario, income, 1800, Renda
+Cartao, outcome, 500, Cartoes

@@ -58,11 +58,11 @@ class ImportTransactionsService {
     await categoriesRepository.save(newCategories);
     const finalCategories = [...newCategories, ...existentCategories];
     const createdTransactions = transactionRepository.create(
-      transactions.map((transaction: any) => ({
+      transactions.map(transaction => ({
         title: transaction.title,
         type: transaction.type,
         value: transaction.value,
-        categorory: finalCategories.find(
+        category: finalCategories.find(
           category => category.title === transaction.category,
         ),
       })),
@@ -71,7 +71,7 @@ class ImportTransactionsService {
 
     await fs.promises.unlink(filePath);
 
-    return createdTransactions;
+    return [createdTransactions];
   }
 }
 
